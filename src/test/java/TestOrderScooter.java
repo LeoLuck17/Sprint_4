@@ -30,7 +30,7 @@ public class TestOrderScooter extends BeforeAndAfterAllTest{
     }
 
     @Test
-    public void incorrectScooterOrder(){
+    public void successfulScooterOrderSecondData(){
         MainPage mainPage = new MainPage(driver);
         mainPage.clickOrderButtonMiddle();
 
@@ -38,7 +38,7 @@ public class TestOrderScooter extends BeforeAndAfterAllTest{
         //Заполнение страницы - Для кого самокат
         entryDataPage.fillingFieldName("Яна");
         entryDataPage.fillingFieldSecondName("Тестовая");
-        entryDataPage.fillingFieldAddress("Город Грусть, Проспект РазочарованияБ дом 13");
+        entryDataPage.fillingFieldAddress("Город Отчуждение, Проспект РазочарованияБ дом 13");
         entryDataPage.fillingFieldMetroStation("Царицыно");
         entryDataPage.fillingFieldNumberPhone("81111111111");
         entryDataPage.touchButtonNext();
@@ -52,5 +52,4 @@ public class TestOrderScooter extends BeforeAndAfterAllTest{
         pageAboutRent.clickButtonYes();
         pageAboutRent.checkPopupSuccessfullyOrder(); //не работает
     }
-
 }
